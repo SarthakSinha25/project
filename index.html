@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"></html>
+<html>
+    <head>
+
+        <meta charset="utf-8"/>
+        <script src="lib/p5.js"></script>
+        <script src="lib/p5.dom.min.js"></script>
+        <script src="lib/p5.sound.min.js"></script>
+        <script src="lib/p5.play.js"></script>
+        <script src="lib/matter.js"></script>
+        <script src="js/Game.js"></script>
+        <script src="js/Player.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/database-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBItIcOcao5fS6L4E-kvuV7yOoKNj2J5rs",
+    authDomain: "space-adventure-79ab1.firebaseapp.com",
+    projectId: "space-adventure-79ab1",
+    storageBucket: "space-adventure-79ab1.appspot.com",
+    messagingSenderId: "758546694579",
+    appId: "1:758546694579:web:259060b953c38c8b0b4bc6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    </head>
+
+
+    <body>
+      <script src="sketch.js"></script>
+      <script>
+        function getFullscreenElement(){
+          return document.fullscreenElement
+              || document.webkitFullscreenElement
+              || document.mozFullscreenElement
+              || document.mskitFullscreenElement
+        }
+
+            document.addEventListener("dblclick",  () => {
+              document.documentElement.requestFullscreen().catch(() => {
+                console.log(e);
+              })
+            })
+
+        document.addEventListener("fullscreenchange", () => {
+          console.log("ss");
+        })
+      </script>
+
+    </body>
+</html>
